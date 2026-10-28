@@ -1,0 +1,411 @@
+// ============================================================
+// KDU Asset Tracker – Static Data & Mock Records
+// ============================================================
+import type { AssetRecord, FacultyDepartment } from './types';
+
+// ----------------------------------------------------------
+// Faculty → Department Hierarchy
+// ----------------------------------------------------------
+export const FACULTY_HIERARCHY: FacultyDepartment[] = [
+  {
+    faculty: 'Faculty of Computing',
+    shortCode: 'FOC',
+    departments: [
+      'Department of IT',
+      'Department of Computational Mathematics',
+      'Department of Computer Engineering',
+      'Department of Computer Science',
+    ],
+  },
+  {
+    faculty: 'Faculty of Allied Health Sciences',
+    shortCode: 'FAHS',
+    departments: [
+      'Department of Nursing & Midwifery',
+      'Radiography Department',
+    ],
+  },
+  {
+    faculty: 'Faculty of Defence & Strategic Studies',
+    shortCode: 'FDSS',
+    departments: ['Intake 41', 'Intake 42', 'Intake 43'],
+  },
+  {
+    faculty: 'Faculty of Engineering',
+    shortCode: 'FOE',
+    departments: ['General'],
+  },
+  {
+    faculty: 'Faculty of Criminal Justice',
+    shortCode: 'FOCJ',
+    departments: ['General'],
+  },
+  {
+    faculty: 'Faculty of Medicine & Health Sciences',
+    shortCode: 'FMSH',
+    departments: ['General'],
+  },
+  {
+    faculty: 'Officer Mess',
+    shortCode: 'OM',
+    departments: ['General'],
+  },
+  {
+    faculty: 'Enlistment Department',
+    shortCode: 'ED',
+    departments: ['General'],
+  },
+];
+
+// ----------------------------------------------------------
+// Quartermaster Officers
+// ----------------------------------------------------------
+export const OFFICERS: string[] = [
+  'Capt. W.A. Priyankara',
+  'Maj. K.L. Fernando',
+  'Lt. S.M. Perera',
+  'Capt. R.D. Silva',
+];
+
+// ----------------------------------------------------------
+// Warranty Period presets
+// ----------------------------------------------------------
+export const WARRANTY_PRESETS = ['6 Months', '1 Year', '2 Years', '3 Years'];
+
+// ----------------------------------------------------------
+// Year range for filter
+// ----------------------------------------------------------
+export const YEAR_RANGE = [2020, 2021, 2022, 2023, 2024, 2025, 2026];
+
+// ----------------------------------------------------------
+// Seed Mock Data
+// ----------------------------------------------------------
+export const MOCK_DATA: AssetRecord[] = [
+  {
+    id: 'rec-001',
+    indexNumber: 52,
+    receiptNumber: 'බැර. ලැර. 42',
+    ledgerDate: '2020.05.15',
+    billDate: '2020.03.13',
+    supplier: 'ENEX AGENCIES (PVT) LTD',
+    items: [
+      {
+        itemName: 'Executive Table 60"x30"x30" - Melamine',
+        quantity: 10,
+        model: '-',
+        warrantyPeriod: '1 Year',
+        unitPrice: 37780,
+      },
+      {
+        itemName: 'Executive Chair High Back',
+        quantity: 10,
+        model: 'EEC 022',
+        warrantyPeriod: '-',
+        unitPrice: 14080,
+      },
+      {
+        itemName: 'Visitor Chair',
+        quantity: 20,
+        model: 'CNTC 5006',
+        warrantyPeriod: '-',
+        unitPrice: 15950,
+      },
+      {
+        itemName: 'Drawer With Three Lockers 28"x19x20"',
+        quantity: 10,
+        model: '-',
+        warrantyPeriod: '-',
+        unitPrice: 8550,
+      },
+    ],
+    totalValue: 996948,
+    faculty: 'FOC',
+    department: 'Department of IT',
+    issuedDate: '2020.05.20',
+    quartermasterOfficer: 'Capt. W.A. Priyankara',
+    entryApproval: 'Accept',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2020-052',
+    year: 2020,
+  },
+  {
+    id: 'rec-002',
+    indexNumber: 53,
+    receiptNumber: 'බැර. ලැර. 13',
+    ledgerDate: '2021.02.22',
+    billDate: '2021.02.10',
+    supplier: 'CDS ENTERPRISES',
+    items: [
+      {
+        itemName: 'Computer Chairs With Arm With Revolving Country - Malaysia',
+        quantity: 35,
+        model: 'CDS',
+        warrantyPeriod: '2 Years',
+        unitPrice: 5940,
+      },
+    ],
+    totalValue: 207900,
+    faculty: 'FOC',
+    department: 'Department of Computer Science',
+    issuedDate: '2021.03.01',
+    quartermasterOfficer: 'Capt. W.A. Priyankara',
+    entryApproval: 'Accept',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2021-053',
+    year: 2021,
+  },
+  {
+    id: 'rec-003',
+    indexNumber: 55,
+    receiptNumber: 'බැර. ලැර. 41',
+    ledgerDate: '2021.04.09',
+    billDate: '-',
+    supplier: 'SUH MARKETING',
+    items: [
+      {
+        itemName: 'Vacuum Cleaner - Italy',
+        quantity: 1,
+        model: 'BASE 429 M 429 B/T',
+        warrantyPeriod: '3 Years',
+        unitPrice: 160000,
+      },
+    ],
+    totalValue: 160000,
+    faculty: 'FOC',
+    department: 'Department of Computer Engineering',
+    issuedDate: '2021.04.15',
+    quartermasterOfficer: 'Capt. W.A. Priyankara',
+    entryApproval: 'Pending',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2021-055',
+    year: 2021,
+  },
+  {
+    id: 'rec-004',
+    indexNumber: 1,
+    receiptNumber: 'FAHS/R-01',
+    ledgerDate: '2026.07.24',
+    billDate: '2026.06.22',
+    supplier: 'SCIENTIFIC INSTRUMENTS',
+    items: [
+      {
+        itemName: 'Sphygmomanometer (Rossmax) Country - Taiwan',
+        quantity: 10,
+        model: '-',
+        warrantyPeriod: '1 Year',
+        unitPrice: 140000,
+      },
+    ],
+    totalValue: 1400000,
+    faculty: 'FAHS',
+    department: 'Department of Nursing & Midwifery',
+    issuedDate: '2026.08.01',
+    quartermasterOfficer: 'Capt. W.A. Priyankara',
+    entryApproval: 'Request',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2026-001',
+    year: 2026,
+  },
+  {
+    id: 'rec-005',
+    indexNumber: 5,
+    receiptNumber: 'FAHS/R-02',
+    ledgerDate: '2026.08.06',
+    billDate: '2026.07.17',
+    supplier: 'SCIENTIFIC INSTRUMENTS',
+    items: [
+      {
+        itemName: 'X-Ray Illuminator (Double Sheets)',
+        quantity: 4,
+        model: '-',
+        warrantyPeriod: '1 Year',
+        unitPrice: 42000,
+      },
+    ],
+    totalValue: 168000,
+    faculty: 'FAHS',
+    department: 'Radiography Department',
+    issuedDate: '2026.08.10',
+    quartermasterOfficer: 'Capt. W.A. Priyankara',
+    entryApproval: 'Pending',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2026-005',
+    year: 2026,
+  },
+  // ── Additional mock data for richer demo ──
+  {
+    id: 'rec-006',
+    indexNumber: 60,
+    receiptNumber: 'බැර. ලැර. 58',
+    ledgerDate: '2023.09.12',
+    billDate: '2023.08.30',
+    supplier: 'DIMO (PVT) LTD',
+    items: [
+      {
+        itemName: 'HP ProBook 450 G10 Laptop',
+        quantity: 15,
+        model: 'ProBook 450 G10',
+        warrantyPeriod: '2 Years',
+        unitPrice: 285000,
+      },
+      {
+        itemName: 'HP LaserJet Pro MFP M428fdw',
+        quantity: 3,
+        model: 'M428fdw',
+        warrantyPeriod: '1 Year',
+        unitPrice: 125000,
+      },
+    ],
+    totalValue: 4650000,
+    faculty: 'FOC',
+    department: 'Department of Computational Mathematics',
+    issuedDate: '2023.09.20',
+    quartermasterOfficer: 'Maj. K.L. Fernando',
+    entryApproval: 'Accept',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2023-060',
+    year: 2023,
+  },
+  {
+    id: 'rec-007',
+    indexNumber: 12,
+    receiptNumber: 'FDSS/R-07',
+    ledgerDate: '2024.03.15',
+    billDate: '2024.02.28',
+    supplier: 'MILITARY SUPPLIES CO.',
+    items: [
+      {
+        itemName: 'Steel Bunk Bed – Double Decker',
+        quantity: 50,
+        model: 'MIL-BD-200',
+        warrantyPeriod: '3 Years',
+        unitPrice: 45000,
+      },
+      {
+        itemName: 'Steel Locker – 4 Compartments',
+        quantity: 50,
+        model: 'MIL-LK-400',
+        warrantyPeriod: '3 Years',
+        unitPrice: 28000,
+      },
+    ],
+    totalValue: 3650000,
+    faculty: 'FDSS',
+    department: 'Intake 42',
+    issuedDate: '2024.04.01',
+    quartermasterOfficer: 'Lt. S.M. Perera',
+    entryApproval: 'Accept',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2024-012',
+    year: 2024,
+  },
+  {
+    id: 'rec-008',
+    indexNumber: 70,
+    receiptNumber: 'බැර. ලැර. 72',
+    ledgerDate: '2022.11.03',
+    billDate: '2022.10.15',
+    supplier: 'ABANS PLC',
+    items: [
+      {
+        itemName: 'Samsung 65" UHD Smart TV',
+        quantity: 5,
+        model: 'UA65AU7700',
+        warrantyPeriod: '2 Years',
+        unitPrice: 320000,
+      },
+    ],
+    totalValue: 1600000,
+    faculty: 'FOE',
+    department: 'General',
+    issuedDate: '2022.11.10',
+    quartermasterOfficer: 'Capt. R.D. Silva',
+    entryApproval: 'Accept',
+    removalReason: 'අලාභ හානි වීම්',
+    removalApproval: 'Pending',
+    codeNo: 'KDU-2022-070',
+    year: 2022,
+  },
+  {
+    id: 'rec-009',
+    indexNumber: 15,
+    receiptNumber: 'OM/R-03',
+    ledgerDate: '2025.01.20',
+    billDate: '2025.01.10',
+    supplier: 'SINGER (SRI LANKA) PLC',
+    items: [
+      {
+        itemName: 'Industrial Air Conditioner 24000 BTU',
+        quantity: 8,
+        model: 'SNG-AC-24K',
+        warrantyPeriod: '2 Years',
+        unitPrice: 195000,
+      },
+      {
+        itemName: 'Water Dispenser – Hot & Cold',
+        quantity: 4,
+        model: 'SNG-WD-100',
+        warrantyPeriod: '1 Year',
+        unitPrice: 32000,
+      },
+    ],
+    totalValue: 1688000,
+    faculty: 'OM',
+    department: 'General',
+    issuedDate: '2025.02.01',
+    quartermasterOfficer: 'Maj. K.L. Fernando',
+    entryApproval: 'Pending',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2025-015',
+    year: 2025,
+  },
+  {
+    id: 'rec-010',
+    indexNumber: 80,
+    receiptNumber: 'බැර. ලැර. 80',
+    ledgerDate: '2024.07.05',
+    billDate: '2024.06.20',
+    supplier: 'DIGITAL SYSTEMS (PVT) LTD',
+    items: [
+      {
+        itemName: 'Epson EB-X49 Projector',
+        quantity: 10,
+        model: 'EB-X49',
+        warrantyPeriod: '2 Years',
+        unitPrice: 175000,
+      },
+      {
+        itemName: 'Projector Ceiling Mount Kit',
+        quantity: 10,
+        model: 'PRJ-CM-01',
+        warrantyPeriod: '1 Year',
+        unitPrice: 8500,
+      },
+      {
+        itemName: '100" Motorized Projection Screen',
+        quantity: 10,
+        model: 'SCR-M-100',
+        warrantyPeriod: '1 Year',
+        unitPrice: 42000,
+      },
+    ],
+    totalValue: 2255000,
+    faculty: 'FOC',
+    department: 'Department of IT',
+    issuedDate: '2024.07.15',
+    quartermasterOfficer: 'Capt. W.A. Priyankara',
+    entryApproval: 'Accept',
+    removalReason: '',
+    removalApproval: 'Request',
+    codeNo: 'KDU-2024-080',
+    year: 2024,
+  },
+];
